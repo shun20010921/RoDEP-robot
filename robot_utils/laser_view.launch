@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="port" default="/dev/ttyUSB0" />
+  <arg name="offset" default="16.0" />
+
+  <!-- run camsense_driver -->
+  <node pkg="camsense_driver" type="camsense_publisher" name="camsense_publisher" output="screen">
+    <param name="port" value="$(arg port)"/>
+    <param name="offset" value="$(arg offset)"/>
+    <param name="frame_id" value="laser"/>
+  </node>
+
+</launch>

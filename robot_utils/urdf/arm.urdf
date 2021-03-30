@@ -1,0 +1,96 @@
+<?xml version="1.0" ?> <!-- https://qiita.com/yoneken/items/ed2e5edf3aa4e0d8d2e3 -->
+<robot name="gaze_arm">
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="-0.075 -0.026 -0.043" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot_utils/stl/base_link.STL" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 .8 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="joint0" type="revolute">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="0.5293" velocity="6.159937255" />
+  </joint>
+
+  <link name="link1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot_utils/stl/joint1.STL" />
+      </geometry>
+      <material name="yellow">
+        <color rgba="0.94 1 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0 -0.009 0.0149" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="0.5293" velocity="6.159937255" />
+  </joint>
+
+  <link name="link2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://robot_utils/stl/link1.STL" />
+      </geometry>
+      <material name="green">
+        <color rgba="0 .8 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0.004 0.1128" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.046666667" upper="1.046666667" effort="0.5293" velocity="6.159937255" />
+  </joint>
+
+  <link name="link3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://robot_utils/stl/link2.STL" />
+      </geometry>
+      <material name="orange">
+        <color rgba="1 .64 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="hand_joint" type="revolute">
+    <parent link="link3"/>
+    <child link="hand_link"/>
+    <origin xyz="0 0.01 0.12634" rpy="0 0 0" /><!--z = 0.11384+0.0125-->
+    <axis xyz="0 0 1" />
+    <limit lower="-1.046666667" upper="1.046666667" effort="0.5293" velocity="6.159937255" />
+  </joint>
+
+ <link name="hand_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.045 0.025" />
+      </geometry>
+      <material name="red">
+        <color rgba=".8 0 0 1" />
+      </material>
+    </visual>
+  </link>
+
+</robot>

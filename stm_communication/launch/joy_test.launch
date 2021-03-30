@@ -1,0 +1,13 @@
+<launch>
+  <node
+    pkg="stm_communication"
+    type="stm_serial.py"
+    name="stm_uart_sender"
+  />
+  <node
+    pkg="stm_communication"
+    type="joy_stm.py"
+    name="stm_topic_sender"
+  />
+  <node name="Joyyy"  pkg="joy"  type="joy_node" output="screen"></node>
+</launch>

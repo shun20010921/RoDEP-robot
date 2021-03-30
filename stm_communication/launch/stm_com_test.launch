@@ -1,0 +1,12 @@
+<launch>
+  <node
+    pkg="stm_communication"
+    type="stm_serial.py"
+    name="stm_uart_sender"
+  />
+ <!-- <node
+    pkg="stm_communication"
+    type="stm_test.py"
+    name="stm_topic_sender"
+  />-->
+</launch>

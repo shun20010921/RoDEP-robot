@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ubuntu/rodep_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ubuntu/rodep_ws/src/RoDEP-robot/camsense_driver/include/**",
+        "/home/ubuntu/rodep_ws/src/RoDEP-robot/robot_utils/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}

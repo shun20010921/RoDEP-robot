@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="stm_communication" name="uart_controller" type="stm_serial.py"/>
+</launch>
