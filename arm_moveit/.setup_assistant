@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_utils
+    relative_path: urdf/arm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/gaze_arm.srdf
+  CONFIG:
+    author_name: guetan
+    author_email: shun@guetan.dev
+    generated_timestamp: 1621399169

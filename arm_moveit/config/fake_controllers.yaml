@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_arm0_controller
+    joints:
+      - joint0
+      - joint1
+      - joint2
+      - hand_joint
+initial:  # Define initial robot poses.
+  - group: arm0
+    pose: virtical
